@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void rev(vector<int>arr , int n)
+{
+    stack<int>S;
+    for(int i=0 ; i<n ; i++)    
+    S.push(arr[i]);
+    
+    for(int i=0 ;i<n ; i++)
+    {
+        cout<<S.top()<<" ";
+        S.pop();
+    }
+}
+
+int main()
+{
+    int n; cin>>n;
+    vector<int>arr(n);
+    for(int i=0 ; i<n ; i++)  
+    {
+        cin>>arr[i];
+    }
+    rev(arr,n);
+    return 0;
+}
